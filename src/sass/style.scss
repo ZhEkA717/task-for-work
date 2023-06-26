@@ -1,0 +1,22 @@
+@import './base/variables';
+
+@import './blocks/form-aside';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background: $main-background;
+}
+
+.sign-up {
+    max-width: 665px;
+    height: 481px;
+    margin: auto;
+    display: flex;
+    
+}

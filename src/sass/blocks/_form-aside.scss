@@ -1,0 +1,19 @@
+.form-aside {
+    width: 138px;
+    height: 481px;
+    background: $main-color;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        white-space: nowrap;
+        bottom: 71px;
+        right: -44px;
+        letter-spacing: 0.5px;
+        font-family: 'PT Sans';
+        font-weight: 400;
+        transform: rotate(-90deg);
+        color: $light-color-text;
+        font-size: 49px;
+    }
+}
