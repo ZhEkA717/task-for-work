@@ -1,5 +1,8 @@
 .main {
+    position: relative;
     padding: 39px 20px;
+    background: #FFFFFF;
+    width: 528px;
 
     &__title {
         font-family: "Work Sans";
@@ -14,5 +17,14 @@
         font-size: 14px;
         color: $dark-color-text;
         letter-spacing: -0.3px;
+    }
+
+    &__form {
+    }
+
+    .pictures-image {
+        position: absolute;
+        bottom: -4px;
+        right: 0;
     }
 }
