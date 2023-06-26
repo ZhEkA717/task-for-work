@@ -19,7 +19,72 @@
             <div class="main__subtitle">Use the form below to create your account.</div>
         
             <form action="" class="main__form">
-
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">First Name</div>
+                        <input class="input" type="text"/>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Last Name</div>
+                        <input class="input" type="text"/>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Nationality</div>
+                        <select class="select" name="nationality" id="nationality-select">
+                            <option value="american">American</option>
+                            <option value="russian">Russian</option>
+                            <option value="ukrain">Ukrain</option>
+                            <option selected value="belarus">Belarus</option>
+                            <option value="belarus">Poland</option>
+                        </select>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">E-mail</div>
+                        <input class="input" type="text"/>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Date of Birth</div>
+                        <div class="date">
+                            <select class="select" name="days" id="day-select">
+                                <option value="american">21</option>
+                            </select>
+                            <select class="select" name="month" id="month-select">
+                                <option value="american">December</option>
+                            </select>
+                            <select class="select" name="years" id="year-select">
+                                <option value="american">1995</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Gender</div>
+                        <div class="gender">
+                            <div class="gender__radio">
+                                <input id="radio-1" type="radio" name="radio" value="1">
+                                <label for="radio-1">Male</label>
+                            </div>
+                             
+                            <div class="gender__radio">
+                                <input id="radio-2" type="radio" name="radio" value="2" checked>
+                                <label for="radio-2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Password</div>
+                        <input class="input" type="password"/>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Confirm Password</div>
+                        <input class="input" type="password"/>
+                    </div>
+                </div>
             </form>
 
             <div class="pictures-image">
