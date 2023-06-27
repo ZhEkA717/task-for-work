@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" sizes="16x16" href="favicon.ico">
 </head>
@@ -16,7 +16,7 @@
         <aside class="form-aside">
             <div class="form-aside__title">Sign up</div>
         </aside>
-        <section class="registered-success">
+        <div class="registered-success">
             <div class="message">
                 <p class="animate__animated animate__fadeInUp">Thank You!</p>
                 <p class="animate__animated animate__fadeInUp">you registered!</p>
@@ -26,20 +26,20 @@
                     Have an account? <a href="">Login</a>
                 </div>
             </div>
-        </section>
-        <section class="main">
+        </div>
+        <div class="main">
             <div class="main__title">New user?</div>
             <div class="main__subtitle">Use the form below to create your account.</div>
         
-            <form action="" method="post" class="main__form">
+            <form class="main__form">
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">First Name</div>
-                        <input required class="input firstName" type="text"/>
+                        <input class="input firstName" type="text">
                     </div>
                     <div class="form-element">
                         <div class="title">Last Name</div>
-                        <input required class="input lastName" type="text"/>
+                        <input class="input lastName" type="text">
                     </div>
                 </div>
                 <div class="form-line">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-element">
                         <div class="title">E-mail</div>
-                        <input class="input email" type="text"/>
+                        <input class="input email" type="text">
                         <img class="shape" src="./assets/icons/shape.svg" alt="shape">
                     </div>
                 </div>
@@ -95,11 +95,11 @@
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">Password</div>
-                        <input class="input password" type="password"/>
+                        <input class="input password" type="password">
                     </div>
                     <div class="form-element">
                         <div class="title">Confirm Password</div>
-                        <input class="input confirm-password" type="password"/>
+                        <input class="input confirm-password" type="password">
                     </div>
                 </div>
 
@@ -120,7 +120,7 @@
             <div class="progress-bar">
                 <div class="loading"></div>
             </div>
-        </section>
+        </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
