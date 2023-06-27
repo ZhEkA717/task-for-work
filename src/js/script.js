@@ -4,7 +4,6 @@ submit.addEventListener('click', (event) => {
     event.preventDefault();
 
     const isAnimation = event.currentTarget.classList.contains('animation');
-    console.log(isAnimation);
 
     if (!isAnimation) {
         event.currentTarget.classList.add('animation');
@@ -17,4 +16,13 @@ submit.addEventListener('click', (event) => {
 
 submit.addEventListener('animationend', (event) => {
     event.currentTarget.classList.remove('animation');
+})
+
+
+const formElements = document.querySelectorAll('.form-element');
+
+formElements.forEach((item, i) => {
+    setTimeout(() => {
+        item.classList.add('animate__animated', 'animate__fadeInUp');
+    }, i * 250);
 })

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -18,15 +19,15 @@
             <div class="main__title">New user?</div>
             <div class="main__subtitle">Use the form below to create your account.</div>
         
-            <form action="" class="main__form">
+            <form action="" method="post" class="main__form">
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">First Name</div>
-                        <input class="input" type="text"/>
+                        <input required class="input" type="text"/>
                     </div>
                     <div class="form-element">
                         <div class="title">Last Name</div>
-                        <input class="input" type="text"/>
+                        <input required class="input" type="text"/>
                     </div>
                 </div>
                 <div class="form-line">
@@ -42,7 +43,7 @@
                     </div>
                     <div class="form-element">
                         <div class="title">E-mail</div>
-                        <input class="input" type="text"/>
+                        <input required class="input" type="text"/>
                     </div>
                 </div>
                 <div class="form-line">
@@ -51,12 +52,15 @@
                         <div class="date">
                             <select class="select" name="days" id="day-select">
                                 <option value="american">21</option>
+                                <option value="american">27</option>
                             </select>
                             <select class="select" name="month" id="month-select">
                                 <option value="american">December</option>
+                                <option value="american">June</option>
                             </select>
                             <select class="select" name="years" id="year-select">
                                 <option value="american">1995</option>
+                                <option value="american">2023</option>
                             </select>
                         </div>
                     </div>
