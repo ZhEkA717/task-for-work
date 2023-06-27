@@ -1,5 +1,6 @@
 const submit = document.querySelector('.submit-button');
 
+// animation for button
 const startAnimation = () => {
     const isAnimation = event.currentTarget.classList.contains(('animate__animated','animate__shakeX'));
 
@@ -14,7 +15,7 @@ submit.addEventListener('click', (event) => {
 });
 
 
-
+// end button animation
 submit.addEventListener('animationend', (event) => {
     event.currentTarget.classList.remove('animate__animated','animate__shakeX');
 })
@@ -22,6 +23,7 @@ submit.addEventListener('animationend', (event) => {
 
 const formElements = document.querySelectorAll('.form-element');
 
+// field animation with delay 250ms
 formElements.forEach((item, i) => {
     setTimeout(() => {
         item.classList.add('animate__animated', 'animate__fadeInUp');
