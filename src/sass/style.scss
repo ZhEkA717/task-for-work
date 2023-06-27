@@ -2,9 +2,6 @@
 
 @import './blocks/form-aside';
 @import './blocks/form';
-@import './blocks/keyframes';
-
-@import 'animate.css';
 
 * {
     margin: 0;
@@ -21,6 +18,8 @@ body {
     max-width: 665px;
     height: 481px;
     margin: auto;
-    display: flex;
-    
+    display: flex; 
 }
+
+@import './blocks/media';
+

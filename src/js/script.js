@@ -1,21 +1,22 @@
 const submit = document.querySelector('.submit-button');
 
+const startAnimation = () => {
+    const isAnimation = event.currentTarget.classList.contains(('animate__animated','animate__shakeX'));
+
+    if (!isAnimation) 
+        event.currentTarget.classList.add('animate__animated','animate__shakeX');
+}
+
 submit.addEventListener('click', (event) => {
     event.preventDefault();
 
-    const isAnimation = event.currentTarget.classList.contains('animation');
-
-    if (!isAnimation) {
-        event.currentTarget.classList.add('animation');
-
-           setTimeout(() => {
-               event.currentTarget.className = 'submit-button';
-           }, 500);
-    }
+    startAnimation();
 });
 
+
+
 submit.addEventListener('animationend', (event) => {
-    event.currentTarget.classList.remove('animation');
+    event.currentTarget.classList.remove('animate__animated','animate__shakeX');
 })
 
 
