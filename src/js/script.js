@@ -10,56 +10,64 @@ const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const confirmPassword = document.querySelector('.confirm-password');
 
+const formElements = document.querySelectorAll('.form-element');
+let isLoading = false;
+
 firstName.addEventListener('input', validateInput);
 lastName.addEventListener('input', validateInput);
+email.addEventListener('input', (event) => addEmailError(event.target));
+password.addEventListener('input', (event) => addPasswordError(event.target));
+confirmPassword.addEventListener('input', (event) => addPasswordError(event.target));
+
 firstName.addEventListener('blur', validateInput);
 lastName.addEventListener('blur', validateInput);
 password.addEventListener('blur', (event) => addPasswordError(event.target));
 confirmPassword.addEventListener('blur', (event) => addPasswordError(event.target));
 
-function validateInput(event) {
-    const el = event.target;
-    addRequiredError(el);
-    
-    el.value.length > 25
-        ? el.value = el.value.slice(0,25)
-        : el.value = el.value;
+const stylesValid = {
+    borderBottom: '1px solid #F2F2F2',
+    color: '#111111',
+    display: 'block'
 }
 
-email.addEventListener('input', (event) => {
-    const el = event.target;
-    addEmailError(el);
-})
+const stylesInvalid = {
+    borderBottom: '2px solid #ff0000',
+    color: '#ff0000',
+    display: 'none'
+}
 
+
+function validateInput(event) {
+    addRequiredError(event.target);
+}
+
+// required field for type text, password
 function addRequiredError(el) {
     el.value
-        ?  el.style.borderBottom = '1px solid #F2F2F2'
-        :  el.style.borderBottom = '2px solid #ff0000';
+        ?  el.style.borderBottom = stylesValid.borderBottom
+        :  el.style.borderBottom = stylesInvalid.borderBottom;
 }
 
 function addEmailError(el) {
     if (emailIsValid(el)) {
-        el.style.borderBottom = '1px solid #F2F2F2';
-        shape.style.display = 'block';
+        el.style.borderBottom = stylesValid.borderBottom;
+        el.style.color = stylesValid.color;
+        shape.style.display = stylesValid.display;
     } else {
-        el.style.borderBottom = '2px solid #ff0000';
-        shape.style.display = 'none';
+        el.style.borderBottom = stylesInvalid.borderBottom;
+        el.style.color = stylesInvalid.color;
+        shape.style.display = stylesInvalid.display;
     }
 }
 
 function addPasswordError(el) {
     passwordIsValid(el)
-    ?  el.style.borderBottom = '1px solid #F2F2F2'
-    :  el.style.borderBottom = '2px solid #ff0000';
+    ?  el.style.borderBottom = stylesValid.borderBottom
+    :  el.style.borderBottom = stylesInvalid.borderBottom;
 }
 
-password.addEventListener('input', (event) => {
-    addPasswordError(event.target);
-})
-confirmPassword.addEventListener('input', (event) => {
-    addPasswordError(event.target);
-})
 
+// regular for mail validate
 function emailIsValid(el) {
     return el.value.toLowerCase()
     .match(
@@ -67,6 +75,7 @@ function emailIsValid(el) {
     );
 }
 
+// validate password lenght > 8, upperCase, numbers 
 function passwordIsValid(el) {
     const lengthPassword = el.value.length > 8;
     const mixtureLowerAndUpperLetter = /([a-z])/.test(el.value)
@@ -80,6 +89,7 @@ function passwordIsValid(el) {
     mixtureLowerAndUpperLetter;
 }
 
+// compare passwords
 function isEquallyPasswords() {
     const password = document.querySelector('.password');
     const confirmPassword = document.querySelector('.confirm-password');
@@ -87,11 +97,13 @@ function isEquallyPasswords() {
     return password.value === confirmPassword.value;
 }
 
+// reset fields of password if passwords not equal
 function resetToErrorPassword(el) {
     el.value = '';
-    el.style.borderBottom = '2px solid #ff0000';
+    el.style.borderBottom = stylesInvalid.borderBottom;
 }
 
+// validate form by clicked button
 function isValidForm() {
     const firstName = document.querySelector('.firstName');
     const lastName = document.querySelector('.lastName');
@@ -104,7 +116,9 @@ function isValidForm() {
     addRequiredError(email);
     addRequiredError(password);
     addRequiredError(confirmPassword);
+
     addEmailError(email);
+
     addPasswordError(password);
     addPasswordError(confirmPassword);
     
@@ -113,29 +127,24 @@ function isValidForm() {
         passwordIsValid(password) && passwordIsValid(password);
 }
 
-
-
 // animation for button
-const startAnimation = (event) => {
+function startAnimation (event) {
     const isAnimation = event.target.classList.contains(('animate__animated','animate__shakeX'));
 
     if (!isAnimation) 
         event.target.classList.add('animate__animated','animate__shakeX');
 }
 
+// save user or animate button
 submit.addEventListener('click', (event) => {
     event.preventDefault();
    isValidForm() ? saveUser() : startAnimation(event);
 });
 
-
 // end button animation
 submit.addEventListener('animationend', (event) => {
     event.target.classList.remove('animate__animated','animate__shakeX');
 })
-
-
-const formElements = document.querySelectorAll('.form-element');
 
 // field animation with delay 250ms
 formElements.forEach((item, i) => {
@@ -144,9 +153,6 @@ formElements.forEach((item, i) => {
         item.classList.add('animate__animated', 'animate__fadeInUp');
     }, i * 250);
 })
-
-
-let isLoading = false;
 
 // post fake request
 function saveUser() {
@@ -162,7 +168,7 @@ function saveUser() {
         method: "post",
         body: JSON.stringify({
             completed:  false,
-            title: 'add new user',
+            title: 'Add new user',
         })
       }).then(res => {
         isGetRequest();
@@ -171,18 +177,21 @@ function saveUser() {
       })
 
 }
+
 // show loading progress-ber and disabled button 
 function isWaitRequest() {
     submit.disabled = true;
-    progressBar.style.display = 'block';
+    progressBar.style.display = stylesValid.display;
 }
+
 // hide loading progress-ber and enabled button
 function isGetRequest() {
     submit.disabled = false;
-    progressBar.style.display = 'none';
+    progressBar.style.display = stylesInvalid.display;
 }
+
 // show successfully message and hide form 
 function registeredSuccessful() {
-    mainForm.style.display = 'none';
-    successMsg.style.display = 'block';
+    successMsg.style.display = stylesValid.display;
+    mainForm.style.display = stylesInvalid.display;
 }
