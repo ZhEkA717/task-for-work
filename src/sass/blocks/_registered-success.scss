@@ -1,0 +1,44 @@
+.registered-success {
+    position: relative;
+    padding: 39px 20px;
+    background: #FFFFFF;
+    width: 528px;
+    display: none;
+
+    .message {
+        position: absolute;
+        top: 50%;
+        left: 63.8px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin-top: 3px;
+
+        p:first-child {
+            font-size: 22px;
+            font-family: 'Work Sans';
+            font-weight: 500;
+            letter-spacing: -0.46px;
+        }
+
+        p:last-child {
+            font-size: 14px;
+            font-family: 'Work Sans';
+            font-weight: 300;
+        }
+    }
+
+    .complete-login {
+        position: absolute;
+        white-space: nowrap;
+        left: 20px;
+        bottom: 43px;
+        font-family: 'Work Sans';
+        font-weight: 300;
+
+        .to-login, a {
+            font-size: 13px;
+        }
+    }
+}

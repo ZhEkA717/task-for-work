@@ -16,6 +16,17 @@
         <aside class="form-aside">
             <div class="form-aside__title">Sign up</div>
         </aside>
+        <section class="registered-success">
+            <div class="message">
+                <p class="animate__animated animate__fadeInUp">Thank You!</p>
+                <p class="animate__animated animate__fadeInUp">you registered!</p>
+            </div>
+            <div class="complete-login">
+                <div class="to-login">
+                    Have an account? <a href="">Login</a>
+                </div>
+            </div>
+        </section>
         <section class="main">
             <div class="main__title">New user?</div>
             <div class="main__subtitle">Use the form below to create your account.</div>
@@ -24,17 +35,17 @@
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">First Name</div>
-                        <input required class="input" type="text"/>
+                        <input required class="input firstName" type="text"/>
                     </div>
                     <div class="form-element">
                         <div class="title">Last Name</div>
-                        <input required class="input" type="text"/>
+                        <input required class="input lastName" type="text"/>
                     </div>
                 </div>
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">Nationality</div>
-                        <select class="select" name="nationality" id="nationality-select">
+                        <select class="select nationality" name="nationality" id="nationality-select">
                             <option value="american">American</option>
                             <option value="russian">Russian</option>
                             <option value="ukrain">Ukrain</option>
@@ -44,24 +55,25 @@
                     </div>
                     <div class="form-element">
                         <div class="title">E-mail</div>
-                        <input required class="input" type="text"/>
+                        <input class="input email" type="text"/>
+                        <img class="shape" src="./assets/icons/shape.svg" alt="shape">
                     </div>
                 </div>
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">Date of Birth</div>
                         <div class="date">
-                            <select class="select" name="days" id="day-select">
-                                <option value="american">21</option>
-                                <option value="american">27</option>
+                            <select class="select days" name="days" id="day-select">
+                                <option value="21">21</option>
+                                <option value="27">27</option>
                             </select>
-                            <select class="select" name="month" id="month-select">
-                                <option value="american">December</option>
-                                <option value="american">June</option>
+                            <select class="select month" name="month" id="month-select">
+                                <option value="December">December</option>
+                                <option value="June">June</option>
                             </select>
-                            <select class="select" name="years" id="year-select">
-                                <option value="american">1995</option>
-                                <option value="american">2023</option>
+                            <select class="select years" name="years" id="year-select">
+                                <option value="1995">1995</option>
+                                <option value="2023">2023</option>
                             </select>
                         </div>
                     </div>
@@ -69,12 +81,12 @@
                         <div class="title">Gender</div>
                         <div class="gender">
                             <div class="gender__radio">
-                                <input id="radio-1" type="radio" name="radio" value="1">
+                                <input id="radio-1" type="radio" name="radio" value="male">
                                 <label for="radio-1">Male</label>
                             </div>
                              
                             <div class="gender__radio">
-                                <input id="radio-2" type="radio" name="radio" value="2" checked>
+                                <input id="radio-2" type="radio" name="radio" value="female" checked>
                                 <label for="radio-2">Female</label>
                             </div>
                         </div>
@@ -83,17 +95,17 @@
                 <div class="form-line">
                     <div class="form-element">
                         <div class="title">Password</div>
-                        <input class="input" type="password"/>
+                        <input class="input password" type="password"/>
                     </div>
                     <div class="form-element">
                         <div class="title">Confirm Password</div>
-                        <input class="input" type="password"/>
+                        <input class="input confirm-password" type="password"/>
                     </div>
                 </div>
 
                 <div class="complete-login">
                     <div class="to-login">
-                        Have an account? <a href="#">Login</a>
+                        Have an account? <a href="">Login</a>
                     </div>
                     <button class="submit-button" type="submit">Complete Signup</button>
                 </div>

@@ -72,6 +72,7 @@
             width: 100%;
             height: 42px;
             position: relative;
+            opacity: 0;
 
             .title {
                 font-family: 'Work Sans';
@@ -91,18 +92,20 @@
                 outline: none;
                 background: transparent;
                 border-bottom: 1px solid $bottom-line-color;
-                transition: .3s;
 
                 &:focus,
                 &:active,
                 &:hover {
                     border: none;
                     border-bottom: 1px solid $bottom-line-hover-color;
-
-                    & ~.title {
-                        color: red;
-                    } 
                 }
+            }
+
+            .shape {
+                position: absolute;
+                right: 2px;
+                top: 24px;
+                display: none;
             }
 
 
