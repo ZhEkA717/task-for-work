@@ -1,10 +1,3 @@
-@media(max-width: 675px) {
-    .sign-up {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-}
-
 @media(max-width: 635px) {
     .main {
         .form-line {
@@ -18,11 +11,6 @@
 
     .form-aside {
         height: 720px;
-    }
-
-    .registered-success {
-        width: 100%;
-        height: 250px;
     }
 }
 
@@ -56,6 +44,11 @@
         &__subtitle {
             font-size: 12px;
         }
+    }
+
+    .registered-success {
+        width: 100%;
+        height: 250px;
     }
 }
 
