@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-for-work</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" sizes="16x16" href="favicon.ico">
+</head>
+<body>
+    <div class="sign-up">
+        <aside class="form-aside">
+            <div class="form-aside__title">Sign up</div>
+        </aside>
+        <div class="registered-success">
+            <div class="message">
+                <p class="animate__animated animate__fadeInUp">Thank You!</p>
+                <p class="animate__animated animate__fadeInUp">you registered!</p>
+            </div>
+            <div class="complete-login">
+                <div class="to-login">
+                    Have an account? <a href="">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main__title">New user?</div>
+            <div class="main__subtitle">Use the form below to create your account.</div>
+        
+            <form class="main__form">
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">First Name</div>
+                        <input class="input firstName" type="text">
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Last Name</div>
+                        <input class="input lastName" type="text">
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Nationality</div>
+                        <select class="select nationality" name="nationality" id="nationality-select">
+                            <option value="american">American</option>
+                            <option value="russian">Russian</option>
+                            <option value="ukrain">Ukrain</option>
+                            <option selected value="belarus">Belarus</option>
+                            <option value="belarus">Poland</option>
+                        </select>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">E-mail</div>
+                        <input class="input email" type="text">
+                        <img class="shape" src="./assets/icons/shape.svg" alt="shape">
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Date of Birth</div>
+                        <div class="date">
+                            <select class="select days" name="days" id="day-select">
+                                <option value="21">21</option>
+                                <option value="27">27</option>
+                            </select>
+                            <select class="select month" name="month" id="month-select">
+                                <option value="December">December</option>
+                                <option value="June">June</option>
+                            </select>
+                            <select class="select years" name="years" id="year-select">
+                                <option value="1995">1995</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Gender</div>
+                        <div class="gender">
+                            <div class="gender__radio">
+                                <input id="radio-1" type="radio" name="radio" value="male">
+                                <label for="radio-1">Male</label>
+                            </div>
+                             
+                            <div class="gender__radio">
+                                <input id="radio-2" type="radio" name="radio" value="female" checked>
+                                <label for="radio-2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div class="form-element">
+                        <div class="title">Password</div>
+                        <input class="input password" type="password">
+                    </div>
+                    <div class="form-element">
+                        <div class="title">Confirm Password</div>
+                        <input class="input confirm-password" type="password">
+                    </div>
+                </div>
+
+                <div class="complete-login">
+                    <div class="to-login">
+                        Have an account? <a href="">Login</a>
+                    </div>
+                    <button class="submit-button" type="submit">Complete Signup</button>
+                </div>
+            </form>
+
+            <div class="pictures-image">
+                <object type="application/x-shockwave-flash" data="./assets/icons/user-background.svg">
+                    <embed src="./assets/icons/user-background.svg">
+                </object>
+            </div>
+
+            <div class="progress-bar">
+                <div class="loading"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

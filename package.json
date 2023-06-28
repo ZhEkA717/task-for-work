@@ -1,0 +1,35 @@
+{
+  "name": "task-for-work",
+  "version": "1.0.0",
+  "description": "test task for work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhEkA717/test-tsk-for-work.git"
+  },
+  "author": "Evgeniy Grushevskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhEkA717/test-tsk-for-work/issues"
+  },
+  "homepage": "https://github.com/ZhEkA717/test-tsk-for-work#readme",
+  "devDependencies": {
+    "animate.css": "^4.1.1",
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.6"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
+}

@@ -1,0 +1,52 @@
+<svg 
+    width="411" 
+    height="411" 
+    viewBox="0 0 411 411"
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    style="position: absolute; right: -102px; bottom: -57px"
+>
+    <style>
+        .first-circle,
+        .second-circle,
+        .third-circle {
+            fill='none';
+            stroke: #F9FAFF;
+            stroke-width: 27;
+        }
+    
+        <defs>
+            <style>
+                .first-circle,
+                .second-circle,
+                .third-circle {
+                    stroke-dasharray: 1200;
+                    stroke-dashoffset: 0;
+                    -webkit-animation: dash 2s linear forwards;
+                    -o-animation: dash 2s linear forwards;
+                    -moz-animation: dash 2s linear forwards;
+                    animation: dash 2s linear forwards;
+                }
+                .second-circle {
+                    animation: dash 6s linear forwards;
+                }
+                .third-circle {
+                    animation: dash 3s linear forwards;
+                }
+    
+                @-webkit-keyframes dash {
+                    from {
+                        stroke-dashoffset: 1200;
+                    }
+    
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            </style>
+        </defs>
+    </style>
+    <circle class='first-circle' cx="205.5" cy="205.5" r="191"/>
+    <circle class='second-circle' cx="205.5" cy="144" r="45"/>
+    <circle class='third-circle' cx="205.5" cy="350" r="120"/>
+</svg>
